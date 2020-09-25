@@ -9,4 +9,30 @@
     display: table;
     clear: both;
   }
+  .first{
+    background-color: gray;
+     position: fixed; 
+     width: 100%; 
+     top:0%;
+      padding: 20px; 
+      text-align: center 
+}
+a{
+    margin: 0px 30px; 
+    font-size: 30px
+}
+.div{
+    padding: 30px; 
+    text-align: center;
+    border-bottom:15px dashed red; 
+    margin: 0px 300px 0px 300px; 
+    padding: 20px;   
+}
+h1{
+    text-align: center; 
+    color: red;
+}
+p{
+    font-size: 25px;   
+}
   

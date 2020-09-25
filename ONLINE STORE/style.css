@@ -1,0 +1,62 @@
+
+.img{
+    width: 450px;
+    height: 400px;
+}
+.nav-bar{
+    background-color: black;
+    height: 70px;
+    display: flex;
+    position: fixed; 
+     width: 100%; 
+     top:0%;
+     
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+    position: fixed;
+    ;
+}
+.produce-container {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+.flex-container{
+    border:3px solid gray;
+}
+.padding{
+    padding-top: 50px;
+}
+.first{
+    background-color: gray;
+     position: fixed; 
+     width: 20%;
+      top:0%;
+       padding: 80px; 
+       right:0px   
+}
+.second{
+    margin: 0px 30px; 
+    font-size: 25px
+}
+.name{
+    color:red; 
+    text-align: center;
+     font-size: 50px;
+}
+.age{
+    text-align: center;
+     color:seagreen; 
+     font-size: 45px; 
+}
+.school{
+    text-align: center; 
+    color:tan; 
+    font-size: 40px;
+}
+.phone{
+    text-align:center; 
+    color: blue; 
+    font-size: 35px;
+}
