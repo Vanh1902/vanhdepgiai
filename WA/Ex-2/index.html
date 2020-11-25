@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hello">xin chào</h1>
+    <h2 id="lo"> hello</h2>
+    <button onclick="ChangeStyle()">nhấn tôi điđi</button>
+    <script>
+        // let a = 1;
+        // console.log(a);
+        // a=2;
+        // console.log(a);
+        // const Pi=3.14;
+        // console.log(Pi);
+        // Pi=2;
+        // console.log(Pi);
+
+
+        // let a=prompt("nhap tên ");
+        // let b=" xin chào bạn:"+a;
+        // console.log(b);
+
+
+        document.getElementById("hello").style.color = "red";
+        console.dir(hello);
+        document.getElementById("hello").innerHTML = "ABC";
+        let d = document.getElementById('hello');
+        d.innerHTML = "DEF";
+
+
+
+
+        function ChangeStyle(){
+        let e = document.getElementById("lo");
+        e.style.textDecoration = "underline";
+        e.style.fontStyle = "italic";
+        e.style.backgroundColor = "blue";
+        e.style.color = "yellow";
+        }
+    </script>   
+</body>
+</html>

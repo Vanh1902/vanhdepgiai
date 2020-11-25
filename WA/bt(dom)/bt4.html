@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset=utf-8 />
+    </head>
+    <body>
+    <p><a id='w3r'>w3resource</a></p>
+    <button onclick="getAttributes()">Click here to get  attributes value</button>
+    <script>
+        console.dir('w3r');
+        function getAttributes(){
+            let c = document.getElementById(w3r)
+            c.firstChild.href= "http://www.w3.org/1999/xhtml";
+            c.firstChild.hreflang="en-us";
+            c.rel="nofollow";
+            c.target="_self";
+            c.type="text/html" 
+        }
+    </script>
+    </body>
+    </html>
+    
