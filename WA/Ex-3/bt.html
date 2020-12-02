@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list"></ul>
+    <button onclick="PrintToDoList()">click me</button>
+    <script>
+    let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+    let o = ["th","st","nd","rd"]
+    let n = document.innerHTML = Math.floor(Math.random() * 7);
+    let PrintToDoList = function(){
+    for(let i = 0;i < n;i++ ){
+        let list = document.getElementById("list");
+        let fake = document.createElement("li");
+        fake.innerHTML = color [i];
+        fake.style.color = o [i];
+        list.appendChild(fake);
+                }
+    }
+            
+
+
+            
+    </script>
+</body>
+</html>
