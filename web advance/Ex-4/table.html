@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 100%;
+            height: 100%;
+        }
+        input{
+            height: 100%;
+            weight: 95% ;
+        }
+    </style>
+</head>
+<body>
+    <h1>basic Caculator</h1>
+    <table border="1" style="width: 280px; height: 300px;">
+        <tr>
+            <th colspan="3"><input type="text" id="result"></th>
+            <th><button onclick="deletes()">clear</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="display(7)">7</button></th>
+            <th><button onclick="display(8)">8</button></th>
+            <th><button onclick="display(9)">9</button></th>
+            <th><button onclick="setOperator('*')">*</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="display(4)">4</button></th>
+            <th><button onclick="display(5)">5</button></th>
+            <th><button onclick="display(6)">6</button></th>
+            <th><button onclick="setOperator('/')">/</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="display(1)">1</button></th>
+            <th><button onclick="display(2)">2</button></th>
+            <th><button onclick="display(3)">3</button></th>
+            <th><button onclick="setOperator('+')">+</button></th>
+        </tr>
+        <tr>
+            <th><button onclick="display(0)">0</button></th>
+            <th><button onclick="display('.')">.</button></th>
+            <th><button onclick="tinhtoan()">=</button></th>
+            <th><button onclick="setOperator('-')">-</button></th>
+        </tr>
+    </table>
+    <!-- <script> //mã giả(preaducode)
+        số đầu tiên + toán tử (+,-,*,/) + số thứ hai = kết quả
+     let sốđầutiên
+     let toántử
+     let sốthứhai
+        1.nhập một số thì số đó sẽ hiện đằng sau số đã hiện
+        2.lưu số hiện tại vào biến số thứ nhấp
+        3.kiểm tra lúc nhấn có phải toán tử không thì sẽ xóa số đã nhập và hiện toán tử
+        4.lưu toán tử đang nghiệm vào biến toán tử
+        5.lưu thông tin của số đang hiện vào biến số thứ hai 
+        6.tạo một biến kết quả bằng 0 để lưu kết quả
+        7.kiểm tra toán tử
+        8.nếu toán tử == "+" thì ta thực hiện phép cộng
+        9.rồi tương tự các dấu còn lại
+        10.cho hiện phần nội dung cho biến kết quả 
+    </script> -->
+    <script>
+        let sodautien;
+        let toantu;
+        let sothuhai;
+        let display = function(n){
+            let result = document.getElementById("result");
+            if (result.value == '+' || result.value == '-' || result.value == 'x' || result.value == '/')
+            {
+                result.value = "";
+
+            }
+            result.value += n;
+            
+        }
+        
+        let setOperator = function(n){
+            let result = document.getElementById("result");
+            sodautien = result.value;
+            result.value = n;
+            toantu = n;
+        }
+
+        let tinhtoan = function(){
+            let result = document.getElementById("result");
+            sothuhai = result.value;
+            let ketqua = 0;
+            sodautien = parseFloat(sodautien);
+            sothuhai = parseFloat(sothuhai);
+            if (toantu == "+"){
+                ketqua = sodautien + sothuhai
+            } 
+            if (toantu == "-"){
+                ketqua = sodautien - sothuhai
+            }
+            if (toantu == "*"){
+                ketqua= sodautien * sothuhai
+            }
+            if (toantu == "/"){
+                ketqua = sodautien / sothuhai
+            }
+         result.value = ketqua
+        }
+        let deletes = function(ketqua){
+            let result = document.getElementById("result");
+            let sodautien=0;
+            let toantu=0;
+            let sothuhai=0;
+        }
+    </script>
+</body>
+</html>
