@@ -1,7 +1,7 @@
 let arr_username = ['admin1','admin2','admin3','admin4','admin5','admin6'];
 let arr_password = ['admin1','admin2','admin3','admin4','admin5','admin6'];
 
-let signinbutton = document.getElementById("si");
+
 
 let elm_login = document.getElementById('btn-login');
 let elm_form = document.getElementById('form-login');
@@ -25,21 +25,18 @@ elm_form.addEventListener('submit',function(event){
         if( username == arr_username[i]){
             let password = elm_password.value;
             if (password == arr_password[i]){
-                signinbutton.style.display = "block";
-                signinbutton.innerHTML = "Sign in successful";
-                signinbutton.style.color = "green";
+                a.style.display = "block"
+                a.style.color = "red"
             }else{
-                signinbutton.style.display = "block";
-                signinbutton.innerHTML = "Sign in unsuccessful";
-                signinbutton.style.color = "red";
+                b.style.display = "block"
+                b.style.color = "red"
             }
             flag = true;
             break;
         }
     }
     if(flag == false){
-        signinbutton.style.display = "block";
-        signinbutton.innerHTML = "not have account";
-        signinbutton.style.color = "blue";
+        c.style.display = "block"
+        c.style.color = "red"
     }
 })
