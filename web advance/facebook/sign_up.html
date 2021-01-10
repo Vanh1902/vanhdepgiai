@@ -16,15 +16,77 @@
                 </div>
                 <div class="facebook--form">
                     <form id="form-login">
-                        <input type="text" placeholder="Email hoặc số điện thoại" id="username">
+                        <input type="text" placeholder="Email hoặc số điện thoại" id="email">
                         <input type="password" placeholder="password" id="password">
-                        <input type="password" placeholder="Nhập lai password" id="">
+                        <input type="text" placeholder="name" id="name">
                         <hr>
-                        <a style="text-align: center;" href="./sign_in(2).html">Đăng nhập</a>
+                        <button type = "button" style="text-align: center" onclick="sign_up()">Đăng nhập</button>
+                        <p id="checkCase"></p>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function sign_up(){
+            let input_email = document.getElementById("email").value;
+        let input_password = document.getElementById("password").value;
+        let input_name = document.getElementById("name").value;
+        let caseBlock = document.getElementById("checkCase");
+
+        let listUsers = [];
+        let listPassword = [];
+        let listUsername = [];
+        let isAccountExist = false;
+        
+        
+        if (JSON.parse(localStorage.getItem("listUsers") != null)){
+            listUsers = JSON.parse(localStorage.getItem("listUsers"))
+        }
+        if( JSON.parse(localStorage.getItem("listPassword") != null)){
+            listPassword = JSON.parse(localStorage.getItem("listPassword"))
+        }
+        if(JSON.parse(localStorage.getItem("listUsername") != null)){
+            listUsername = JSON.parse(localStorage.getItem("listUsername"))
+        }
+        
+    
+        if (input_email == "" || input_name == "" || input_password == ""){
+                console.log("Error");
+                caseBlock.innerHTML = "Sign up false, please fill in all the areas";
+                caseBlock.style.color = "red"
+        }
+        else{
+            for(let i = 0; i < listUsers.length; i++){
+                if(input_email == listUsers[i]){
+                    console.log("Error");
+                    caseBlock.innerHTML = "Sign up false, please fill in all the areas";
+                    caseBlock.style.color = "red";
+                    isAccountExist = true;
+                }
+            }
+            if(isAccountExist){
+                listUsers.push(input_email);
+                listUsername.push(input_name);
+                listPassword.push(input_password);
+
+                localStorage.setItem("listUsers", JSON.stringify(listUsers))
+                localStorage.setItem("listPassword", JSON.stringify(llistPassword))
+                localStorage.setItem("listUsername", JSON.stringify(listUsername));
+
+                console.log("Successful");
+                caseBlock.innerHTML = "Sign up Successful";
+                caseBlock.style.color = "green";
+                console.log("Email:", input_email);
+                console.log("Pass:", input_password);
+                console.log("Name:", input_name);
+
+            }
+        }
+    }
+        
+
+            
+    </script>
 </body>
 </html>

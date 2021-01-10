@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">NVA</h1>
+    
+    <script>
+        // let age = 16;
+        // localStorage.setItem("UserAge", age);
+        // let UserAge = localStorage.getItem("UserAge");
+        // console.log(UserAge)     
+        
+        // localStorage.setItem("coursename","HBT");
+        // let coursename = localStorage.getItem("coursename");
+        // console.log(coursename);
+        
+        // document.getElementById("heading").innerHTML = coursename;
+
+        // localStorage.removeItem("UserAge");
+
+        let islogin = false;
+        console.log(typeof(islogin))
+        localStorage.setItem("islogin", JSON.stringify(islogin) );
+        islogin = JSON.parse(localStorage.getItem("islogin"));
+        console.log(typeof(islogin));
+    
+        
+        </script>
+    
+
+</body>
+</html>

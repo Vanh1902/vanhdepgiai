@@ -78,6 +78,13 @@ ul {
     height: 400px;
     width: 450px;
 }
+.product{
+  margin: 10px;
+    border: 4px;
+    border-radius: 5px;
+    height: 400px;
+    width: 450px;
+}
 
 
 
