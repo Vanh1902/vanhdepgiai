@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chiec non than ki</h1>
+    
+    <script>
+        let words = [
+	"javascript",
+	"monkey",
+	"amazing",
+	"pancake"
+	];
+        
+
+let word = words[Math.floor(Math.random() * words.length)];
+
+//create an empty array called answerArray and fill it 
+//with underscores (_) to match the number
+//of letters in the word
+let answerArray = [];
+
+for( let i=0; i < word.length; i++) {
+	answerArray[i] = "_";
+}
+
+//every time the player guesses a
+//correct letter, this value will 
+//be decremented (reduced) by 1
+let remainingLetters = word.length;
+let guessesNr = 4;
+let isHit = false;
+
+while((remainingLetters > 0) && (guessesNr > 0)) {
+	// Show the player their progress
+	alert("The word is from " + word.length + " letters " + answerArray.join(" "));
+	// Take input from player
+	let guess = prompt("Guess a letter");
+
+	// if the player clicks the Cancel button, then guess will be null
+	if(guess===null) {
+		// break to exit the loop
+		break;
+		//ensuring that guess is exactly one letter
+	} else if(guess.length !== 1) {
+		alert("Please enter a single letter!");
+	} else if(typeof guess !== 'string') {
+		alert("Please enter only letters!");
+	} else {
+		for(let j = 0; j < word.length; j++) {
+			if(word[j] === guess) {
+				// sets the element at index j, from word, 
+				// of answerArray to guess
+				answerArray[j] = guess;
+				remainingLetters--;
+				isHit = true;
+			
+			} 
+		}
+		if(!isHit) {
+			guessesNr--;
+			alert("You have " + guessesNr + " more lives");
+			if(guessesNr === 0) {
+				alert("No more lives");
+				break;
+			}
+			
+		}
+		
+	}
+	
+}
+
+//alert(answerArray.join(" "));
+alert("Great job! The answer was " + word);
+    </script>
+</body>
+</html>

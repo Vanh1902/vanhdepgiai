@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let movie = [
+            {
+                name:"tên: Harry Potter", DV: "Joanne Rowling", year:"Năm 1995"
+            },
+            {
+                name:"tên: Diệp viên XXX", DV: " D. J. Caruso", year:"Năm 2017"
+            },
+            {
+                name:"tên: Harry Potter", DV: "Joanne Rowling", year:"Năm 1995"
+            }
+        ] 
+        console.log(movie);
+        console.log(movie[2].name);
+        console.log(movie[0].DV);
+        console.log(movie[1].year);
+        document.getElementById("demo").innerHTML = movie[2].name;
+        
+        
+    </script>
+</body>
+</html>

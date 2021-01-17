@@ -21,13 +21,38 @@
                         <button id="btn-login">Đăng nhập</button>
                         <a href="#">Quên mật khẩu</a>
                         <hr>
-                        <a style="text-align: center;" href="./sign_up.html">Tạo tài khoản mới</a>
-                        <p style="display: none;" id="si">Sign in failed</p>
+                        <p>don't have account?<a href="./sign_up.html">crate account</a></p>
+                        <p id="checkCase"></p>
                     </form>
                 </div>
             </div>
         </div>e
     </div>
-    <script src="js.js"></script>
+    <script > //src="js.js"// //link dan//
+    function sign_up(){
+        let input_email = document.getElementById("username").value;
+        let input_password = document.getElementById("password").value
+        let caseBlock = document.getElementById("checkCase");
+
+        let listemail = JSON.parse(localStorage.getItem("listUsers"))
+        let listPassword = JSON.parse(localStorage.getItem("listPassword"))
+        
+        
+        for (let i = 0; i < listPassword.length && listemail.length; i++){
+            if( input_email == listemail[i] && input_password == listPassword[i] ){
+                console.log("sign in successful");
+                caseBlock.innerHTML = "sign in successful"
+                caseBlock.style.color = "green"
+            }
+            else{
+                console.log("Errow");
+                caseBlock.innerHTML = "sign in failed";
+                caseBlock.style.color = "red"
+            }
+        }
+    }    
+            
+        
+    </script>
 </body>
 </html>
