@@ -1,0 +1,38 @@
+body{
+    background-image: url("https://previews.123rf.com/images/sergeyvasutin/sergeyvasutin1701/sergeyvasutin170100017/69361440-vector-business-background-long-banner-online-shopping-with-white-and-blue-transparent-elements-arro.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+   
+}
+.nav-bar{
+    background-color:brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position:fixed; top:0;
+    font-size: 30px;   
+}
+.marmenu{
+    margin-left: 50px;
+}
+.form-container{
+    width: 300px;
+    height: auto;
+    padding: 10px 30px;
+    background-color: #ffffff;
+    border-radius:10px ;
+    box-shadow: 0 0 10px 0 #000000;
+    margin: auto;
+    text-align: center;
+    
+
+}
+ul.list{
+list-style-type: none;
+text-align: center;    
+}
+ul.list li input{
+     width: 250px;
+}
