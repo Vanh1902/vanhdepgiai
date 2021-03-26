@@ -36,7 +36,7 @@ function signup() {
             }
         }
 
-        if (email.value.includes("@") == true) {
+        if (email.value.includes("@gmail") == true) {
             if (!isaccountExist) {
                 listUsers.push(input_email);
                 listPassword.push(input_password);

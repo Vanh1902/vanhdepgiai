@@ -12,6 +12,7 @@
         <a>
             <img class="nabbar" src="./LAD_food/img/Untitled 5.png" width="60" height="50">
         </a>
+        <p style="color:white" id="demo"></p> 
         <a class="nabbar font shop-name1" href="./Home.html">Home</a>
         <div class="dropdown">
             <a  class="font shop-name1">Tùy Chọn</a>   
@@ -27,7 +28,8 @@
             </div>
             </div>
         </div>
-     
+     <img style="padding-left: 30px;" src="https://t4.ftcdn.net/jpg/00/97/00/05/240_F_97000552_d8RwiZAnFewznisQphPtjyxxRNAAZQ92.jpg" width="5%" height="99%">
+     <p style= "color:white"id="span"></p>   
     </div >
 
     
@@ -36,22 +38,54 @@
             <img src="./LAD_food/img/download (2).jpg" width="400" height="400">
             <p>CS1 – 24 Lê Văn Hưu, quận Hai Bà Trưng, Hà Nội</p>
             <hr>
-            <a  class="bold shop-name" href="bun_tra.html"><p>Bún chả Hương Liên</p></a> 
-            <p>Mở cửa: 8h00 – 20h30</p>
-            <p class="bold">Giá trung bình:35.000đ - 50.000đ</p>
-        </div>
+            
+            
+                <div class="column2" >
+                    <a  class="bold shop-name" href="bun_tra.html"><p>Bún chả Hương Liên</p></a>
+                <p>Mở cửa: 8h00 – 20h30</p>
+                <p class="bold">Giá trung bình:35.000đ - 50.000đ</p>
+                </div>
+                <div class="column" >
+                  <button style="size: 10px;">take to cart</button>
+                </div>
+                
+            
+            
+        </div>1
         <div class="product">
             <img src="https://dulichkhampha24.com/wp-content/uploads/2020/05/com-ha-noi.jpg" width="400" height="400">
             <p>11 Hàng Than, Nguyễn Trung Trực, Ba Đình, Hà Nội</p>
             <hr>
-            <a class="bold shop-name" href="banh_com.html"><p >Bánh Cốm Nguyên Ninh</p></a> 
+
+
+
+            <div class="column2" >
+               <a class="bold shop-name" href="banh_com.html"><p >Bánh Cốm Nguyên Ninh</p></a> 
             <p>Mở cửa: Mở cửa cả ngày </p>
-            <p class="bold">Giá trung bình:6.000đ - 250.000đ</p>
+            <p class="bold">Giá trung bình:6.000đ - 250.000đ</p> 
+     
+            </div>
+            <div class="column" >
+              <button type= "button" name= "button" id= "btn" onclick="cot()"style="size: 10px;">Add to cart</button>
+            </div>
+            
+            
+       
         </div> 
         <div class="product">
             <img src="./LAD_food/img/download.jpg" width="400" height="400">
             <p>11 Hàng Đường, Hàng Đào, Hoàn Kiếm, Hà Nội</p>
             <hr>
+
+
+            <div class="column2" >
+                <a class="bold shop-name"href="ô_mai.html"><p >Ô mai Hồng Lam</p></a> 
+                <p>Mở cửa:07:30–22:00 </p>
+                <p class="bold">Giá trung bình: 60.000đ - 160.000đ.</p>   
+            </div>
+            <div class="column" >
+              <button style="size: 10px;">take to cart</button>
+            </div>
             <a class="bold shop-name"href="ô_mai.html"><p >Ô mai Hồng Lam</p></a> 
             <p>Mở cửa:07:30–22:00 </p>
             <p class="bold">Giá trung bình: 60.000đ - 160.000đ.</p>
@@ -60,9 +94,16 @@
             <img src="./LAD_food/img/download (1).jpg" width="400" height="400">
             <p> 5 Ngõ 159/25 Hữu Hưng, Nam Từ Liêm, Hà Nội</p>
             <hr>
-            <a class="bold shop-name" href="./chè_lam.html"><p>Kim Cúc Bánh Chè Lam</p></a> 
+
+            <div class="column2" >
+               <a class="bold shop-name" href="./chè_lam.html"><p>Kim Cúc Bánh Chè Lam</p></a> 
             <p>Mở cửa: 06:00 -21:00 </p>
-            <p class="bold">Giá trung bình: 25.000đ – 40.000đ</p>
+            <p class="bold">Giá trung bình: 25.000đ – 40.000đ</p>     
+            </div>
+            <div class="column" >
+              <button style="size: 10px;">take to cart</button>
+            </div>
+            
         </div>
         <div class="product">
             <img src="https://dulichkhampha24.com/wp-content/uploads/2020/05/pho-ha-noi.jpg" width="400" height="400">
@@ -149,7 +190,16 @@
         <hr>
            <h1 class="text-center">MADE BY TEAM: DAM</h1>
     </div>
-    
-    
+    <script type="text/javascript">
+        let btn = document.getElementById('btn');
+        let spn = document.getElementById('span');
+        let count=0;
+        function cot(){
+            count +=1;
+        document.getElementById('span').innerHTML=count;
+        console.log(count)
+        }
+    </script>
+    <script src="index2.js"></script>
 </body>
 </html>

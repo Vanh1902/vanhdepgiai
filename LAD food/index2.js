@@ -30,6 +30,7 @@ function loadfunction(){
         let user = JSON.parse(localStorage.getItem("listEmail"));
         let username = JSON.parse(localStorage.getItem("listUsername"));
         document.getElementById("demo").innerHTML= username[Number(user)]
+        document.getElementById("demo1").innerHTML= "welcome"   
     };
 
 }
