@@ -7,14 +7,21 @@
     margin-top: 55px;
 }
 .product{
-    border:3px solid black;
+    border:3px solid #3FC380;
     width: 33,33333%;
     height: 30%;
     margin: 100px 30px 0 30px;;
 
 }
+.product2{
+    border:3px solid black;
+    width: 25%;
+    height: 30%;
+    margin: 100px 30px 0 30px;;
+
+}
 .nav-bar{
-    background-color: rgb(83, 10, 10);
+    background-color:#22313F;
     top: 0px;
     position: fixed;
     width: 100%;
@@ -121,4 +128,12 @@ button{
     content: "";
     display: table;
     clear: both;
+  }
+
+
+  #grad1 {
+    
+    
+    background-color: #000;
+    linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
   }
