@@ -7,7 +7,7 @@
     <title>OnlineStore</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body >
     <div class="nav-bar">
         <a>
             <img class="nabbar" src="./LAD_food/img/Untitled 5.png" width="60" height="50">
@@ -28,11 +28,12 @@
             </div>
             </div>
         </div>
-     <img style="padding-left: 30px;" src="https://t4.ftcdn.net/jpg/00/97/00/05/240_F_97000552_d8RwiZAnFewznisQphPtjyxxRNAAZQ92.jpg" width="5%" height="99%">
+        
+     <a href="cart.html"><img style="padding-left: 30px; width: 50px; height: 50px;" src="https://t4.ftcdn.net/jpg/00/97/00/05/240_F_97000552_d8RwiZAnFewznisQphPtjyxxRNAAZQ92.jpg" width="5%" height="99%"></a>
      <p style= "color:white"id="span"></p>   
     </div >
 
-<div id="grad1">
+    <div id="grad1">
     <div class="product-container">
         <div class="product">
             <img src="./LAD_food/img/download (2).jpg" width="430" height="400">
@@ -41,12 +42,13 @@
             
             
                 <div class="column2" >
-                    <a  class="bold shop-name" href="bun_tra.html"><p>Bún chả Hương Liên</p></a>
+                    <a  id="prodTitle" class="bold shop-name" href="bun_tra.html"></a>
                 <p>Mở cửa: 8h00 – 20h30</p>
-                <p class="bold">Giá trung bình:35.000đ - 50.000đ</p>
+                <p class="bold" id="prodPrice" ></p>
                 </div>
                 <div class="column" >
-                  <button style="size: 10px;">take to cart</button>
+                  
+                <button type= "button" name= "button" id= "btnSetData1"  onclick="cot()"  style="size: 10px;">take to cart</a>
                 </div>
                 
             
@@ -66,7 +68,7 @@
      
             </div>
             <div class="column" >
-              <button type= "button" name= "button" id= "btn" onclick="cot()"style="size: 10px;">Add to cart</button>
+              <button type= "button" name= "button" id= "btn" onclick="cot()"style="size: 10px;">take to cart</button>
             </div>
             
             
@@ -86,9 +88,7 @@
             <div class="column" >
               <button style="size: 10px;">take to cart</button>
             </div>
-            <a class="bold shop-name"href="ô_mai.html"><p >Ô mai Hồng Lam</p></a> 
-            <p>Mở cửa:07:30–22:00 </p>
-            <p class="bold">Giá trung bình: 60.000đ - 160.000đ.</p>
+            
         </div>
         <div class="product">
             <img src="./LAD_food/img/download (1).jpg" width="430" height="400">
@@ -260,5 +260,7 @@
         }
     </script>
     <script src="index2.js"></script>
+    <script src="prod2.js"></script>
+    <script src="prod3.js"></script>
 </body>
 </html>
